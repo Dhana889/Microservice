@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        def dockerImage = docker.build "${IMAGE_NAME}"
+                        dockerImage = docker.build "${IMAGE_NAME}"
                     }
                 }
             }
