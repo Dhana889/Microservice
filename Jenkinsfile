@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        APP_NAME = "shippingervice"
+        APP_NAME = "shippingservice"
         RELEASE = "1.0.0"
         DOCKER_USER = "8889docker"
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
