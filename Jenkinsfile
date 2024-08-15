@@ -8,7 +8,6 @@ pipeline {
         IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
         IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     }
-
     stages {
         stage('Build & Tag Docker Image') {
             steps {
@@ -19,7 +18,6 @@ pipeline {
                 }
             }
         }
-        
         stage('Push Docker Image') {
             steps {
                 script {
